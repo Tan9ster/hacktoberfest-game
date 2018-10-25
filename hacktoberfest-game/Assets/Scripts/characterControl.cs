@@ -53,4 +53,13 @@ public class characterControl : MonoBehaviour {
 //		// Destroy the bullet after 2 seconds
 //		Destroy(bullet, 1.5f);
 //	}
+	void OnCollisionEnter2D(Collision2D other) {
+		Debug.Log ("fdsfdsF");
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.gameObject.tag == "walls") {
+			Debug.Log ("fdsfds");
+		}
+	}
 }
