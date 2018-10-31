@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class boss : MonoBehaviour {
 
-	public GameObject fist1;
-	public GameObject fist2;
-	public GameObject fist3;
-	public GameObject fist4;
-	public GameObject fist5;
-	public GameObject fist6;
-	public GameObject face;
+//	public GameObject fist1;
+//	public GameObject fist2;
+//	public GameObject fist3;
+//	public GameObject fist4;
+//	public GameObject fist5;
+//	public GameObject fist6;
+//	public GameObject face;
 
 	public float speed = 400;
 
@@ -19,7 +19,7 @@ public class boss : MonoBehaviour {
 	private Vector2 direction; 
 
 	private Rigidbody2D rb;
-	private float health = 100; 
+	public float health = 100; 
 
 //	enum bossPhase {
 //		phase1,
