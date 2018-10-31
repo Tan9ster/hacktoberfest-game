@@ -11,6 +11,7 @@ public class characterControl : MonoBehaviour {
 	float horizontalMove = 0f;
 	bool jump = false; 
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,7 +20,7 @@ public class characterControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		horizontalMove = Input.GetAxisRaw ("Horizontal") * runSpeed;
-		Debug.Log (Input.GetButtonDown ("Horizontal"));
+		//Debug.Log (Input.GetButtonDown ("Horizontal"));
 		//Debug.Log (Input.GetButtonDown ("Jump"));
 		if (Input.GetButtonDown ("Jump")) {
 			jump = true;
@@ -27,7 +28,7 @@ public class characterControl : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		Debug.Log ("hor" + horizontalMove);
+		//Debug.Log ("hor" + horizontalMove);
 		controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 		jump = false;
 		if (Input.GetKeyDown (KeyCode.Space)) {
@@ -53,13 +54,14 @@ public class characterControl : MonoBehaviour {
 //		// Destroy the bullet after 2 seconds
 //		Destroy(bullet, 1.5f);
 //	}
-	void OnCollisionEnter2D(Collision2D other) {
-		Debug.Log ("fdsfdsF");
-	}
+//	void OnCollisionEnter2D(Collision2D other) {
+//		Debug.Log ("fdsfdsF");
+//	}
+//
+//	void OnTriggerStay2D(Collider2D other) {
+//		if (other.gameObject.tag == "walls") {
+//			Debug.Log ("fdsfds");
+//		}
+//	}
 
-	void OnTriggerStay2D(Collider2D other) {
-		if (other.gameObject.tag == "walls") {
-			Debug.Log ("fdsfds");
-		}
-	}
 }
