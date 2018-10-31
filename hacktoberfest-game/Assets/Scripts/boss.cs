@@ -19,6 +19,7 @@ public class boss : MonoBehaviour {
 	private Vector2 direction; 
 
 	private Rigidbody2D rb;
+	private float health = 100; 
 
 //	enum bossPhase {
 //		phase1,
@@ -43,7 +44,7 @@ public class boss : MonoBehaviour {
 		rb.velocity = direction*Time.deltaTime*speed;
 	}
 
-	void OnTriggerStay2D(Collider2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "walls") {
 			direction = new Vector2(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
 			direction.Normalize ();
